@@ -7,8 +7,9 @@
 */
 
 let statement = "I do not like programming";
-
-let result = "";
+const statement1 = statement.substring(0, 4);
+const statement2 = statement.substring(9, statement.length);
+let result = `${statement1} ${statement2}`;
 
 console.log(result);
 

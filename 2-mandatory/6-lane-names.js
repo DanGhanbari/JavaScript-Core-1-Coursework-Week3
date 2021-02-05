@@ -6,7 +6,11 @@
   HINT: string and array methods that could be helpful (indexOf, filter)
 */
 
-function getLanes() {}
+function getLanes(arr) {
+  const postFix = "Lane";
+  const result = arr.filter((ele) => ele.includes(postFix));
+  return result;
+}
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 

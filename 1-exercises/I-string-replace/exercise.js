@@ -13,13 +13,13 @@
 let story =
   "I like dogs. One day I went to the park and I saw 10 dogs. It was a great day.";
 
-story
-  .replace("dogs", "cats")
-  .replace("day", "night")
+let result = story
+  .replace(/dogs/g, "cats")
+  .replace(/day/g, "night")
   .replace(10, 100000)
-  .replace("dogs", "cats")
-  .replace("great", "brilliant")
-  .replace("day", "night");
+  // .replace("dogs", "cats")
+  .replace("great", "brilliant");
+// .replace("day", "night");
 console.log(story);
 
 /* EXPECTED OUTPUT */
@@ -48,6 +48,6 @@ test(
 
 test(
   "2. The result of the replace is correct",
-  story,
+  result,
   "I like cats. One night I went to the park and I saw 100000 cats. It was a brilliant night."
 );

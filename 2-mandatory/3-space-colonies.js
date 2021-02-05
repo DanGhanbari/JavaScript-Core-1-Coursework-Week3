@@ -15,7 +15,11 @@
   
 */
 
-function colonisers() {}
+function colonisers(arr) {
+  const families = arr.filter((ele) => ele.includes("family"));
+  const result = families.filter((ele) => ele[0] === "A");
+  return result;
+}
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 

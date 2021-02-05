@@ -11,7 +11,19 @@
     Some string methods that might help you here are .replace() and .substring(). 
 */
 
-function safeLevels() {}
+function safeLevels(arr) {
+  //This is the way by using parseFloat() method:
+  const number = arr.map((ele) => parseFloat(ele));
+  return number.find((ele) => ele > 19.5 && ele < 23.5) + "%";
+
+  //This is the way by using .replace() method:
+  // const newArr = arr.map((ele) => ele.replace("%", ""));
+  // return newArr.find((ele) => ele > 19.5 && ele < 23.5) + "%";
+
+  //This is the way by using .substring() method:
+  // const result = arr.map((ele) => ele.substring(0, ele.length - 1));
+  // return result.find((ele) => ele > 19.5 && ele < 23.5) + "%";
+}
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 

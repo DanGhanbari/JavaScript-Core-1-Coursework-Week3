@@ -16,8 +16,7 @@
 */
 
 function colonisers(arr) {
-  const families = arr.filter((ele) => ele.includes("family"));
-  const result = families.filter((ele) => ele[0] === "A");
+  const result = arr.filter((ele) => ele.includes("family") && ele[0] === "A");
   return result;
 }
 

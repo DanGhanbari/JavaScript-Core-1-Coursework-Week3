@@ -22,10 +22,8 @@
 */
 
 function bushChecker(arr) {
-  if (arr.find((ele) => ele === "pink")) {
-    if (arr.every((ele) => ele === "pink")) {
-      return "Bush is safe to eat from";
-    }
+  if (arr.every((ele) => ele === "pink")) {
+    return "Bush is safe to eat from";
   }
   return "Toxic! Leave bush alone!";
 }

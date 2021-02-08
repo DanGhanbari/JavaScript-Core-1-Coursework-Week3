@@ -12,7 +12,7 @@ function cardNum(num) {
   }
   return "Invalid Credit Card Number";
 }
-console.log(cardNum(2222222222227222));
+console.log(cardNum(2222222222222122));
 
 //This function checks if sum of the numbers greater than 16 or not:
 function sumGreaterThan16(num) {
@@ -29,15 +29,26 @@ function sumGreaterThan16(num) {
     return false;
   }
 }
+
 //This function checks if the card number includes at least two different numbers:
 function checkAtleastTwoDigit(num) {
   let arrNum = num.toString(10).split("").map(Number);
-  for (let i = 0; 1 < arrNum.length; i++) {
-    for (let j = 1; j < arrNum.length; j++) {
-      if (arrNum[i] !== arrNum[j]) {
-        return true;
-      }
-    }
+  if (arrNum.every((ele) => ele === arrNum[0])) {
     return false;
+  } else {
+    return true;
   }
 }
+
+//Here is another way to check if the Card number includes at least two different numbers:
+// function checkAtleastTwoDigit(num) {
+//   let arrNum = num.toString(10).split("").map(Number);
+//   for (let i = 0; 1 < arrNum.length; i++) {
+//     for (let j = 1; j < arrNum.length; j++) {
+//       if (arrNum[i] !== arrNum[j]) {
+//         return true;
+//       }
+//     }
+//     return false;
+//   }
+// }

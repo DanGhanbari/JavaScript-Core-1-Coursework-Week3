@@ -8,8 +8,8 @@
 */
 
 function eligibleStudents(arr) {
-  const eligibleExam = arr.filter((ele) => ele[1] >= 8);
-  return eligibleExam.map((ele) => ele[0]);
+  const eligibleExam = arr.filter((ele) => ele[1] >= 8).map((ele) => ele[0]);
+  return eligibleExam;
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */

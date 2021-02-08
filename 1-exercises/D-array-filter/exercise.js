@@ -7,7 +7,6 @@
 */
 
 var pairsByIndexRaw = [[0, 3], [1, 2], [2, 1], null, [1], false, "whoops"];
-
 var pairsByIndex = pairsByIndexRaw.filter(
   (ele) => ele !== null && ele.length === 2
 ); // Complete this statement
